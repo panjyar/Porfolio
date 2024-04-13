@@ -202,19 +202,19 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .social-link {
-  margin-bottom: 10px; /* Adjust this value as needed */
-  transition: transform 0.2s ease, opacity 0.2s ease; /* Transition for hover effect */
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, opacity 0.2s ease; 
   display: flex;
   align-items: center;
 }
 
 .social-link img {
-  width: 30px; /* Adjust the icon size */
+  width: 30px;
   height: 30px;
-  margin-right: 10px; /* Add some spacing between the icon and text */
+  margin-right: 10px; 
 }
 
 .social-link:hover {
-  transform: scale(1.1); /* Scale up the icon on hover */
-  opacity: 0.8; /* Reduce opacity slightly on hover */
+  transform: scale(1.3); 
+  opacity: 0.8; 
 }
