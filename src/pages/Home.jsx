@@ -8,6 +8,7 @@ import Bird from '../models/Bird'
 import HomeInfo from '../components/HomeInfo'
 import sakura from '../assets/bg-music.mp3'
 import { soundoff, soundon } from '../assets/icons';
+import SocialMedia from '../components/SocialMedia';
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -91,6 +92,8 @@ const [planeScale , planePosition]= adjustPlaneForScreenSize();
             />
           </Suspense>
       </Canvas>
+
+      <SocialMedia/>
       <div className="absolute bottom-2 left-2">
         <img 
         src= {isPlayingMusic ? soundoff : soundon}

@@ -15,7 +15,7 @@ const renderContent = {
   1: (
     <h1 className="sm:text-xl sm-leading-snug 
     text-center neo-brutalism-blue py-4 px-8
-     text-white mx-5">1
+     text-white mx-5">
     Hi, I am <span className="font-semibold">Pradip Kumar Panjiyar</span>
     <br />
     A aspiring full stack developer from India
@@ -37,9 +37,9 @@ const renderContent = {
   ),
   4: (
         <InfoBox
-        text="Get in touch!"
+        text="To reach out, just give that 'Get in Touch' button a click."
         link="/contact"
-        btnText="contact"
+        btnText="Get in Touch"
     />
   )
 }

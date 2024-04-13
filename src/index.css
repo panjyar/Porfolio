@@ -111,7 +111,7 @@ body:has(.card[data-color="green"]:hover) {
   transform-origin: bottom right;
   transform: rotateZ(15deg);
   will-change: transform;
-  box-shadow: 16px 0 40px #e4e4e4;
+  box-shadow: 16px 0 40px #bdb5b5;
 }
 
 .block-container .btn-back-red {
@@ -180,4 +180,41 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+.social-links {
+  position: fixed;
+  bottom: 20px; /* Adjust this value as needed */
+  right: 20px; /* Adjust this value as needed */
+  display: flex;
+  flex-direction: column;
+  animation: fadeInFromBottom 0.5s ease-in-out; /* Animation to fade in from the bottom */
+}
+
+@keyframes fadeInFromBottom {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.social-link {
+  margin-bottom: 10px; /* Adjust this value as needed */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Transition for hover effect */
+  display: flex;
+  align-items: center;
+}
+
+.social-link img {
+  width: 30px; /* Adjust the icon size */
+  height: 30px;
+  margin-right: 10px; /* Add some spacing between the icon and text */
+}
+
+.social-link:hover {
+  transform: scale(1.1); /* Scale up the icon on hover */
+  opacity: 0.8; /* Reduce opacity slightly on hover */
 }

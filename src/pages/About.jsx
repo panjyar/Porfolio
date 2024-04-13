@@ -3,6 +3,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import React from 'react'
 import { skills,experiences } from '../constants'
 import CTA from '../components/CTA';
+import SocialMedia from '../components/SocialMedia';
 
 const About = () => {
   return (
@@ -13,7 +14,11 @@ const About = () => {
         </h1>
        
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>Passionate full-stack developer based in India, dedicated to crafting seamless web solutions with innovation.</p>
+          <p>
+          An aspiring full stack developer from India. 
+            Actively improving my data structures and algorithms skills through platforms like LeetCode, CodingNinja, and others, I'm passionate about the MERN stack. I'm on the hunt for exciting web developer roles and freelance projects. 
+            With a knack for crafting sleek and functional web applications, I thrive in dynamic environments where creativity meets code. If you're looking to collaborate on a project or have any questions, feel free to reach out! Let's build something incredible together.
+          </p>
         </div>
 
         <div className="py-10 flex flex-col">
@@ -87,7 +92,7 @@ const About = () => {
 
           <hr className="border-slate-200" />
           <CTA />
-            
+          <SocialMedia/>
       </section>
     </div>
   )

@@ -17,6 +17,7 @@ import {
     sorting,
     resume,
     tailwindcss,
+    twitter,
 } from "../assets/icons";
 
 export const skills = [
@@ -111,12 +112,17 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/panjyar',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/pradip-panjiyar/',
+    },
+    {
+        name: 'Twitter',
+        iconUrl: twitter,
+        link: 'https://twitter.com/pradipPanjiyar2',
     }
 ];
 
