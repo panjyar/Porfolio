@@ -132,7 +132,7 @@ export const projects = [
         theme: 'btn-back-red',
         name: 'Resume Parser and Ranking system',
         description: 'Designed and implemented a resume parser and ranking system, automating candidate evaluation to optimize recruitment processes, saving time and improving hiring outcomes."',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        link: 'https://github.com/panjyar/Resume_Ranking_System.git',
     },
     {
         iconUrl: movie,
