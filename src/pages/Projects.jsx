@@ -44,7 +44,7 @@ const Projects = () => {
                                             rel="neoopener noreferrer"
                                             className="font-semibold text-blue-600"
                                         >
-                                            Github Link
+                                           Live Demo
                                         </Link>
                                         <img
                                             src={arrow}

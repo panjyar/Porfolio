@@ -94,6 +94,13 @@ const [planeScale , planePosition]= adjustPlaneForScreenSize();
       </Canvas>
 
       <SocialMedia/>
+      {/* Floating Instruction */}
+<div className="absolute top-8 w-full flex justify-center z-20 pointer-events-none">
+  <p className="text-slate-300 text-sm md:text-base animate-fade-out transition-opacity duration-300 text-center">
+    Click and drag to explore the island. Use the arrows to fly with the bird.
+  </p>
+</div>
+
       <div className="absolute bottom-2 left-2">
         <img 
         src= {isPlayingMusic ? soundoff : soundon}
