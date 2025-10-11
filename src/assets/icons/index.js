@@ -26,12 +26,53 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
-
+import pandas from './pandas.jpg'
+import numpy from "./numpy.png"
+import sklearn from "./sklearn.jpg"
+import spacy from "./spacy.png"
+import crawl4ai from "./crawl4ai.jpg"
+import aws from "./aws.png"
+import docker from "./docker.png"
+import postman from "./postman.jpg"
+import postgresql from "./postgresql.png"
+import sqlite from "./sqlite.png"
+import vscode from "./vscode.jpeg"
+import mysql from './mysql.png'
+import bootstrap from './bootstrap.png'
+import nginx from './nginix.png'
+import gcp from './gcp.png'
+import kubernetes from './kubernates.png'
+import flask from './flask.png'
+import sql from './sql.svg'
+import c from './c.png'
+import cpp from './cpp.jpeg'
+import python from './python.jpeg'
 export {
     css,
-    express,
-    git,
+    c,
+    cpp,
+    python,
+    sql,
+    flask,
+    kubernetes,
+    nginx,
+    gcp,
+    bootstrap,
+    mysql,
     github,
+    sqlite,
+    vscode,
+    git,
+    postgresql,
+    postman,
+    docker,
+    aws,
+    crawl4ai,
+    spacy,
+    sklearn,
+    numpy,
+    pandas,
+    express,
     html,
     javascript,
     mongodb,
