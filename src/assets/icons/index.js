@@ -47,8 +47,23 @@ import sql from './sql.svg'
 import c from './c.png'
 import cpp from './cpp.jpeg'
 import python from './python.jpeg'
+import certificate from './certificate.png'
+import disaster from './disaster.png'
+import googlecloud from './googlecloud.png'
+import moviereview from './moviereview.png'
+import resumeranking from './resumeranking.png'
+import wheather from './wheather.png'
+import kube from './kubecredentials.png'
+import ecommerce from './ecommerce.png'
+import collegebuzz from './collegebuzz.png'
+import chat from './chat.png'
 export {
     css,
+    ecommerce,chat,
+    collegebuzz,
+    googlecloud,moviereview,resumeranking,wheather,kube,
+    disaster,
+    certificate,
     c,
     cpp,
     python,

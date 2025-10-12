@@ -39,7 +39,11 @@ import {
     python,
     cpp,
     c ,
-    
+    googlecloud,moviereview,resumeranking,wheather,kube,
+    disaster,
+    certificate,
+    collegebuzz,
+    ecommerce,chat,
 
 } from "../assets/icons";
 
@@ -175,6 +179,65 @@ export const projectCategories = [
 ];
 
 export const projects = [
+
+    // Full Stack Projects
+    {
+        category: "fullstack",
+        iconUrl: sorting,
+        theme: 'btn-back-green',
+        name: 'CollegeBuzz',
+        shortDescription: 'Academic news aggregator from 100+ AICTE colleges with intelligent archival system.',
+        fullDescription: 'This is a full-stack web application that aggregates academic news and events from over 100 AICTE-approved college websites. Built using Flask for the backend with Crawl4AI for web scraping, MongoDB for data storage, and React.js for the frontend. Features include a scalable data pipeline, RESTful API, dynamic search functionality, multi-criteria sorting, and automated archival system for older content. Used github actions CI/CD to automate deployment. The backend is deployed on GCP using Gunicorn and Nginx, with DuckDNS for domain management and Let\'s Encrypt SSL for secure HTTPS access. The frontend is hosted on Netlify, and the database is managed on NeonDB for high availability and performance.',
+        technologies: ['Flask', 'Crawl4AI', 'MongoDB', 'React', 'GCP', 'Python'],
+        deployment: 'Backend on GCP with Gunicorn, Nginx, DuckDNS; Frontend on Netlify; Database on NeonDB',
+        liveLink: 'https://college-buzz.vercel.app/',
+        githubLink: 'https://github.com/panjyar/CollegeBuzz.git',
+        preview: collegebuzz,
+        features: [
+            'Aggregates data from 100+ colleges',
+            'RESTful API with Flask',
+            'Dynamic search and sorting',
+            'Automated archival system'
+        ]
+    },
+    {
+        category: "fullstack",
+        iconUrl: estate,
+        theme: 'btn-back-green',
+        name: 'E-Commerce Platform',
+        shortDescription: 'Full-featured MERN e-commerce application with payment gateway integration.',
+        fullDescription: 'A comprehensive e-commerce platform built using the MERN stack. Features include JWT-based authentication with CORS policy enforcement, Razorpay payment gateway integration for secure transactions, shopping cart and wishlist functionality, order management system, and advanced product filtering. The application implements secure API access patterns and real-time payment validation.',
+        technologies: ['MERN', 'JWT', 'Razorpay', 'REST API', 'Node.js', 'Express'],
+        deployment: 'Full-stack MERN deployment',
+        liveLink: 'https://e-commerce-1lac.onrender.com/',
+        githubLink: 'https://github.com/panjyar/E-Commerce-.git',
+        preview: ecommerce,
+        features: [
+            'JWT authentication with CORS',
+            'Razorpay payment integration',
+            'Cart and wishlist management',
+            'Advanced product filtering'
+        ]
+    },
+    {
+        category: "fullstack",
+        iconUrl: news,
+        theme: 'btn-back-green',
+        name: 'Real-time Chat Application',
+        shortDescription: 'WebSocket-based chat system with AI assistant and delivery receipts.',
+        fullDescription: 'A real-time messaging application built with React, Node.js, Express, and PostgreSQL. Features include JWT-based authentication, Socket.IO for real-time communication, typing indicators, delivery receipts, and an AI auto-reply assistant. The application is containerized using Docker and uses Prisma ORM for database management.',
+        technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.IO', 'Docker', 'Prisma'],
+        deployment: 'Dockerized deployment',
+        liveLink: 'https://whatapp-chat-app-client.onrender.com/',
+        githubLink: 'https://github.com/panjyar/whatApp-Chat-App',
+        preview: chat,
+        features: [
+            'Real-time messaging with Socket.IO',
+            'Typing indicators and receipts',
+            'AI auto-reply assistant',
+            'Dockerized architecture'
+        ]
+    },
     // Cloud & DevOps Projects
     {
         category: "cloud",
@@ -185,9 +248,9 @@ export const projects = [
         fullDescription: 'This is a cloud-native credential issuance and verification platform built using Node.js microservices architecture. The system is deployed on Google Kubernetes Engine (GKE) with auto-scaling using HPA, persistent storage with StatefulSets, and secure internal service communication. Features include JWT-based authentication, automatic token refresh, and role-based access control.',
         technologies: ['Node.js', 'React', 'TypeScript', 'Kubernetes', 'Docker', 'GCP'],
         deployment: 'Deployed on GKE with CI/CD using Cloud Build',
-        liveLink: 'https://github.com/panjyar/Credential-Issuance-Verification-Platform.git',
+        liveLink: 'http://kubecredential.duckdns.org/',
         githubLink: 'https://github.com/panjyar/Credential-Issuance-Verification-Platform.git',
-        preview: null,
+        preview: kube,
         features: [
             'Microservices architecture with auto-scaling',
             'JWT authentication with token refresh',
@@ -199,14 +262,14 @@ export const projects = [
         category: "cloud",
         iconUrl: sorting,
         theme: 'btn-back-blue',
-        name: 'Certificate Generator v2',
+        name: 'Certificate Generator for Google Cloud Study Jam 2023',
         shortDescription: 'Client-side certificate generator containerized with Docker and deployed on Cloud Run.',
         fullDescription: 'This is a client-side certificate generator built using HTML, CSS, and JavaScript with jsPDF library. The application is containerized using Docker with Nginx as the web server and deployed on Google Cloud Run. Features automated CI/CD pipeline with Cloud Build for seamless deployment. Successfully distributed certificates to 300+ participants.',
         technologies: ['HTML', 'CSS', 'JS', 'jsPDF', 'Docker', 'Nginx', 'GCP'],
         deployment: 'Cloud Run with automated CI/CD via Cloud Build',
         liveLink: 'https://google-cloud-certificate-gdsccitk.netlify.app/',
         githubLink: 'https://github.com/panjyar/gdsccitkcloud.git',
-        preview: null,
+        preview: certificate,
         features: [
             'Dynamic PDF generation using jsPDF',
             'Email-based certificate retrieval',
@@ -218,14 +281,14 @@ export const projects = [
         category: "cloud",
         iconUrl: news,
         theme: 'btn-back-blue',
-        name: 'Weather App Deployment',
+        name: 'Weather Application',
         shortDescription: 'Containerized Flask weather application with CI/CD deployment on Google Cloud Run.',
         fullDescription: 'A full-stack weather application built with Flask and deployed on Google Cloud Run. The application uses OpenWeather API for real-time weather data. Features include Docker containerization, automated builds via Cloud Build, and deployment to Cloud Run with automatic SSL certificates.',
         technologies: ['Flask', 'Python', 'Docker', 'GCP', 'Cloud Run', 'Cloud Build'],
         deployment: 'Google Cloud Run with Cloud Build CI/CD',
-        liveLink: 'https://github.com/panjyar/Weather-App.git',
+        liveLink: 'https://weather-container-1030325322639.asia-south1.run.app/',
         githubLink: 'https://github.com/panjyar/Weather-App.git',
-        preview: null,
+        preview: wheather,
         features: [
             'Real-time weather data integration',
             'Dockerized Flask application',
@@ -239,14 +302,14 @@ export const projects = [
         category: "aiml",
         iconUrl: resume,
         theme: 'btn-back-purple',
-        name: 'Resume Parsing & Ranking System',
+        name: 'Resume Parsing & Ranking System ',
         shortDescription: 'NLP-powered resume parser with intelligent ranking algorithm for candidate evaluation.',
         fullDescription: 'This is an AI-powered resume parsing and ranking system built using Python and SpaCy NLP. The system extracts structured data (skills, education, experience) from PDF resumes using Named Entity Recognition. Features include an intelligent ranking algorithm that matches resumes against job descriptions with 85% accuracy using keyword weighting and domain scoring. Includes Google OAuth for secure authentication and MongoDB for data management.',
         technologies: ['Python', 'Flask', 'MongoDB', 'SpaCy', 'NLP', 'OAuth'],
         deployment: 'Flask server with MongoDB Atlas',
-        liveLink: 'https://github.com/panjyar/Resume_Ranking_System.git',
+        liveLink: 'https://www.youtube.com/watch?v=ujUgUUOB0T8',
         githubLink: 'https://github.com/panjyar/Resume_Ranking_System.git',
-        preview: null,
+        preview: resumeranking,
         features: [
             'NER-based data extraction from PDFs',
             'Intelligent ranking with 85% accuracy',
@@ -265,7 +328,7 @@ export const projects = [
         deployment: 'Flask application',
         liveLink: 'https://github.com/panjyar/Movie_Recommendation_System.git',
         githubLink: 'https://github.com/panjyar/Movie_Recommendation_System.git',
-        preview: null,
+        preview: 'https://private-user-images.githubusercontent.com/121200924/306375406-af8b5e67-1c42-45db-9e01-bc55cccedc1c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAzMDI1NzMsIm5iZiI6MTc2MDMwMjI3MywicGF0aCI6Ii8xMjEyMDA5MjQvMzA2Mzc1NDA2LWFmOGI1ZTY3LTFjNDItNDVkYi05ZTAxLWJjNTVjY2NlZGMxYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQyMDUxMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01NzI4OTI4ZDIzZmQwM2EwNzU5NGM3MWE0MDZjZjVmOWYzZDU0NmEzZWUxYzgxMmYzMmVjYzVlMzMwOTk0OTcyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ZEdx7bo0k16hBMkAgSLNXI961mwrZiyPPTGVhY0EUlw',
         features: [
             'Cosine similarity-based recommendations',
             'Interactive web interface',
@@ -274,7 +337,7 @@ export const projects = [
         ]
     },
     {
-        category: "aiml",
+        category: "fullstack",
         iconUrl: news,
         theme: 'btn-back-purple',
         name: 'Disaster Response Platform',
@@ -282,92 +345,14 @@ export const projects = [
         fullDescription: 'A comprehensive disaster response coordination platform built with MERN stack and integrated with Google Gemini API for AI-assisted decision support. Features include real-time disaster reporting, geospatial queries using Supabase, social media API integration for crowd-sourced data, and AI-powered insights for response coordination.',
         technologies: ['MERN', 'Google Gemini API', 'Supabase', 'Social APIs', 'Geospatial'],
         deployment: 'Full-stack deployment with cloud integration',
-        liveLink: 'https://github.com/panjyar/Disaster-Management-System.git',
+        liveLink: 'https://disaster-management-system-client.onrender.com/',
         githubLink: 'https://github.com/panjyar/Disaster-Management-System.git',
-        preview: null,
+        preview: disaster,
         features: [
             'AI-assisted decision support',
             'Real-time geospatial mapping',
             'Social media integration',
             'Coordinated response management'
-        ]
-    },
-    
-    // Full Stack Projects
-    {
-        category: "fullstack",
-        iconUrl: sorting,
-        theme: 'btn-back-green',
-        name: 'CollegeBuzz',
-        shortDescription: 'Academic news aggregator from 100+ AICTE colleges with intelligent archival system.',
-        fullDescription: 'This is a full-stack web application that aggregates academic news and events from over 100 AICTE-approved college websites. Built using Flask for the backend with Crawl4AI for web scraping, MongoDB for data storage, and React.js for the frontend. Features include a scalable data pipeline, RESTful API, dynamic search functionality, multi-criteria sorting, and automated archival system for older content. Used github actions CI/CD to automate deployment. The backend is deployed on GCP using Gunicorn and Nginx, with DuckDNS for domain management and Let\'s Encrypt SSL for secure HTTPS access. The frontend is hosted on Netlify, and the database is managed on NeonDB for high availability and performance.',
-        technologies: ['Flask', 'Crawl4AI', 'MongoDB', 'React', 'GCP', 'Python'],
-        deployment: 'Backend on GCP with Gunicorn, Nginx, DuckDNS; Frontend on Netlify; Database on NeonDB',
-        liveLink: 'https://college-buzz.vercel.app/',
-        githubLink: 'https://github.com/panjyar/CollegeBuzz.git',
-        preview: null,
-        features: [
-            'Aggregates data from 100+ colleges',
-            'RESTful API with Flask',
-            'Dynamic search and sorting',
-            'Automated archival system'
-        ]
-    },
-    {
-        category: "fullstack",
-        iconUrl: estate,
-        theme: 'btn-back-green',
-        name: 'E-Commerce Platform',
-        shortDescription: 'Full-featured MERN e-commerce application with payment gateway integration.',
-        fullDescription: 'A comprehensive e-commerce platform built using the MERN stack. Features include JWT-based authentication with CORS policy enforcement, Razorpay payment gateway integration for secure transactions, shopping cart and wishlist functionality, order management system, and advanced product filtering. The application implements secure API access patterns and real-time payment validation.',
-        technologies: ['MERN', 'JWT', 'Razorpay', 'REST API', 'Node.js', 'Express'],
-        deployment: 'Full-stack MERN deployment',
-        liveLink: 'https://github.com/panjyar/E-Commerce-.git',
-        githubLink: 'https://github.com/panjyar/E-Commerce-.git',
-        preview: null,
-        features: [
-            'JWT authentication with CORS',
-            'Razorpay payment integration',
-            'Cart and wishlist management',
-            'Advanced product filtering'
-        ]
-    },
-    {
-        category: "fullstack",
-        iconUrl: news,
-        theme: 'btn-back-green',
-        name: 'Real-time Chat Application',
-        shortDescription: 'WebSocket-based chat system with AI assistant and delivery receipts.',
-        fullDescription: 'A real-time messaging application built with React, Node.js, Express, and PostgreSQL. Features include JWT-based authentication, Socket.IO for real-time communication, typing indicators, delivery receipts, and an AI auto-reply assistant. The application is containerized using Docker and uses Prisma ORM for database management.',
-        technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.IO', 'Docker', 'Prisma'],
-        deployment: 'Dockerized deployment',
-        liveLink: 'https://github.com/panjyar/whatApp-Chat-App',
-        githubLink: 'https://github.com/panjyar/whatApp-Chat-App',
-        preview: null,
-        features: [
-            'Real-time messaging with Socket.IO',
-            'Typing indicators and receipts',
-            'AI auto-reply assistant',
-            'Dockerized architecture'
-        ]
-    },
-    {
-        category: "fullstack",
-        iconUrl: news,
-        theme: 'btn-back-green',
-        name: 'Scoop News',
-        shortDescription: 'News aggregation platform with NewsAPI integration and intelligent search.',
-        fullDescription: 'A news aggregation platform that leverages the NewsAPI to fetch top headlines from various sources. Features include user-driven searches, article summaries with thumbnails, and direct access to full content. The application provides an engaging reading experience with category filtering and bookmarking capabilities.',
-        technologies: ['React', 'NewsAPI', 'REST API', 'JavaScript'],
-        deployment: 'Frontend deployment',
-        liveLink: 'https://github.com/panjyar/NewsScoop.git',
-        githubLink: 'https://github.com/panjyar/NewsScoop.git',
-        preview: null,
-        features: [
-            'NewsAPI integration',
-            'Category filtering',
-            'Article summaries',
-            'Direct content access'
         ]
     },
     
@@ -383,7 +368,7 @@ export const projects = [
         deployment: 'Static site on Netlify',
         liveLink: 'https://google-cloud-certificate-gdsccitk.netlify.app/',
         githubLink: 'https://github.com/panjyar/gdsccitkcloud.git',
-        preview: null,
+        preview: certificate,
         features: [
             'Client-side PDF generation',
             'Email-based retrieval',
@@ -395,38 +380,19 @@ export const projects = [
         category: "frontend",
         iconUrl: sorting,
         theme: 'btn-back-pink',
-        name: 'GDSC Leaderboard',
+        name: 'Google Cloud Study Jam  Leaderboard',
         shortDescription: 'Interactive leaderboard for tracking GDSC member activities and rankings.',
         fullDescription: 'An interactive leaderboard web application for tracking Google Developer Student Club member activities and participant rankings. Built with HTML, CSS, and JavaScript, the application features dynamic updates, real-time score calculations, and responsive design for mobile and desktop viewing.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
         deployment: 'Static site deployment',
-        liveLink: 'https://github.com/panjyar/gdsccitkcloud.git',
+        liveLink: 'https://gdsccitkcloud.netlify.app/',
         githubLink: 'https://github.com/panjyar/gdsccitkcloud.git',
-        preview: null,
+        preview: googlecloud,
         features: [
             'Real-time score tracking',
             'Participant rankings',
             'Responsive design',
             'Dynamic updates'
-        ]
-    },
-    {
-        category: "frontend",
-        iconUrl: sorting,
-        theme: 'btn-back-pink',
-        name: 'Sorting Visualizer',
-        shortDescription: 'Interactive visualization tool for sorting algorithms education.',
-        fullDescription: 'An educational tool for visualizing sorting algorithms in real-time. Built with HTML, CSS, and JavaScript, the application demonstrates how bubble sort and other sorting algorithms rearrange elements step-by-step. Features include speed control, array size customization, and multiple algorithm support.',
-        technologies: ['HTML', 'CSS', 'JavaScript', 'Algorithms'],
-        deployment: 'Static site',
-        liveLink: 'https://github.com/panjyar/Sorting-Visualizer.git',
-        githubLink: 'https://github.com/panjyar/Sorting-Visualizer.git',
-        preview: null,
-        features: [
-            'Real-time visualization',
-            'Multiple algorithms',
-            'Speed control',
-            'Educational tool'
         ]
     }
 ];
@@ -435,10 +401,18 @@ export const blogs = [
     {
         title: "How I Built a MongoDB Archiving System for Crawled Data",
         platform: "DEV.to",
-        date: "2024",
+        date: "October 2025",
         description: "A comprehensive guide on building an efficient MongoDB archiving system for managing crawled data at scale, including implementation strategies and best practices.",
         link: "https://dev.to/pradippanjiyar/how-i-built-a-mongodb-archiving-system-for-crawled-data-30o7",
         tags: ["MongoDB", "Python", "Data Management", "Backend"]
+    },
+     {
+        title: "Handling 100+ Website Scrapers with Python's asyncio",
+        platform: "DEV.to",
+        date: "October 2025",
+        description: "A comprehensive guide on building an efficient MongoDB archiving system for managing crawled data at scale, including implementation strategies and best practices.",
+        link: "https://dev.to/pradippanjiyar/handling-100-website-scrapers-with-pythons-asyncio-4905",
+        tags: ["Python", "Web Scraping", "crawl4AI"]
     }
 ];
 
