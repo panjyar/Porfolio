@@ -58,7 +58,8 @@ import {
   collegebuzz,
   ecommerce,
   chat,
-  hobbylink
+  hobbylink,
+  excel,
 } from "../assets/icons";
 
 // Organized Skills by Category
@@ -448,7 +449,38 @@ export const projects = [
       "Modern responsive UI with React Flow",
     ],
   },
-
+  {
+    category: "fullstack",
+    iconUrl: excel,
+    theme: "btn-back-blue",
+    name: "Excel Data Aggregator",
+    shortDescription:
+      "MERN stack web app that imports Excel files, aggregates data, and provides real-time filtering and insights.",
+    fullDescription:
+      "Excel Data Aggregator is a full-stack MERN application that allows users to upload Excel (.xlsx) files, import them into MongoDB, and perform real-time data aggregation with advanced filtering options. It uses Node.js, Express, and Mongoose for backend data handling and aggregation pipelines, while the React-based frontend provides a smooth and responsive experience for uploading, filtering, and visualizing results. The system automatically merges identical records, sums quantities, and updates data instantly, making it ideal for managing large datasets efficiently.",
+    technologies: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Axios",
+      "Multer",
+      "XLSX",
+    ],
+    deployment: "Local and cloud-ready MERN stack setup",
+    liveLink: "https://excel-data-aggregator-client.onrender.com/",
+    githubLink: "https://github.com/panjyar/Excel-Data-Aggregator.git",
+    preview: excel,
+    features: [
+      "Excel file upload and automatic MongoDB import",
+      "Advanced multi-field filtering (category, branch, supplier, fabric, concept)",
+      "Data aggregation using MongoDB pipelines",
+      "Responsive and modern UI with real-time updates",
+      "Automatic record merging and quantity summation",
+    ],
+  },
   // Frontend Projects
   {
     category: "frontend",

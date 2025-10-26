@@ -58,8 +58,10 @@ import ecommerce from './ecommerce.png'
 import collegebuzz from './collegebuzz.png'
 import chat from './chat.png'
 import hobbylink from './hobbylink.png'
+import excel from './excel.png'
 export {
     css,
+    excel,
     hobbylink,
     ecommerce,chat,
     collegebuzz,
