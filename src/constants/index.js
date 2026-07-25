@@ -22,6 +22,11 @@ import {
   nodejs,
   movie,
   react,
+  nextjs,
+  reactnative,
+  LivNSenseLogo,
+  taskmanager,
+  hcp,
   news,
   sorting,
   resume,
@@ -50,6 +55,7 @@ import {
   c,
   googlecloud,
   moviereview,
+  movierecomendation,
   resumeranking,
   wheather,
   kube,
@@ -77,11 +83,14 @@ export const skillCategories = {
   frontend: {
     title: "Frontend Development",
     skills: [
+      { imageUrl: react, name: "React.js", type: "Library" },
+      { imageUrl: nextjs, name: "Next.js", type: "Library" },
+      { imageUrl: reactnative, name: "React Native", type: "Library" },
       { imageUrl: html, name: "HTML", type: "Markup" },
       { imageUrl: css, name: "CSS", type: "Styling" },
-      { imageUrl: tailwindcss, name: "TailwindCSS", type: "Framework" },
-      { imageUrl: react, name: "React.js", type: "Library" },
       { imageUrl: javascript, name: "JavaScript", type: "Language" },
+      { imageUrl: tailwindcss, name: "TailwindCSS", type: "Framework" },
+
       { imageUrl: bootstrap, name: "Bootstrap", type: "Framework" },
     ],
   },
@@ -98,7 +107,7 @@ export const skillCategories = {
     skills: [
       { imageUrl: mongodb, name: "MongoDB", type: "No SQL" },
       { imageUrl: postgresql, name: "PostgreSQL", type: "SQL Database" },
-      { imageUrl: mysql, name: "MySQL", type: "SQL Database" },
+      // { imageUrl: mysql, name: "MySQL", type: "SQL Database" },
       { imageUrl: sqlite, name: "SQLite", type: "SQL Database" },
     ],
   },
@@ -108,11 +117,11 @@ export const skillCategories = {
       { imageUrl: gcp, name: "Google Cloud Platform", type: "Cloud Provider" },
       { imageUrl: aws, name: "AWS", type: "Cloud Provider" },
       { imageUrl: docker, name: "Docker", type: "Containerization" },
-      {
-        imageUrl: kubernetes,
-        name: "Kubernetes",
-        type: "Container Orchestration",
-      },
+      // {
+      //   imageUrl: kubernetes,
+      //   name: "Kubernetes",
+      //   type: "Container Orchestration",
+      // },
       { imageUrl: nginx, name: "Nginx", type: "Web Server / Reverse Proxy" },
     ],
   },
@@ -138,30 +147,47 @@ export const skillCategories = {
   },
 };
 
-export const experiences = [
+export const professionalExperience = [
+  {
+    title: "Software Engineer Intern",
+    company_name: "LivNSense GreenOps Pvt. Ltd.",
+    icon: LivNSenseLogo,
+    iconBg: "#ffffff",
+    date: "November 2025 - July 2026",
+    points: [
+      "Developed full-stack enterprise applications using React.js, Next.js, Node.js, Express.js, and PostgreSQL.",
+      "Built REST APIs, authentication modules, HRMS features, and AI-powered industrial safety solutions.",
+      "Optimized backend performance with Redis caching and collaborated in Agile development teams.",
+    ],
+  },
+];
+
+export const leadershipExperience = [
+  {
+    title: "GDSC Lead",
+    company_name: "Google Developer Student Clubs",
+    icon: gdsc,
+    iconBg: "#ffffff",
+    date: "July 2023 - August 2024",
+    points: [
+      "Led the Google Developer Student Club at Central Institute of Technology Kokrajhar.",
+      "Organized workshops, hackathons, and technical events.",
+      "Mentored students and built collaborations with developer communities.",
+    ],
+  },
+];
+
+export const otherExperience = [
   {
     title: "Subject Matter Expert",
     company_name: "Chegg",
     icon: chegg,
-    iconBg: "#de9368",
+    iconBg: "#ffffff",
     date: "December 2021 - January 2023",
     points: [
-      "Assisted students in clearing doubts and understanding complex academic concepts.",
-      "Provided comprehensive explanations and solutions to student queries with patience and clarity.",
-      "Continuously enhanced personal skills and knowledge through ongoing learning and professional development initiatives.",
-    ],
-  },
-  {
-    title: "Leadership Experience",
-    company_name: "Google Developer Student Clubs",
-    icon: gdsc,
-    iconBg: "#7194e3",
-    date: "July 2023 - August 2024",
-    points: [
-      "GDSC Lead at Central Institute of Technology Kokrajhar",
-      "Drive initiatives for collaboration and learning among students interested in Google technologies",
-      "Organize workshops, hackathons, and networking events",
-      "Aim to enhance technical skills and foster innovation within the campus community",
+      "Provided accurate solutions to Computer Science and Engineering questions.",
+      "Strengthened analytical thinking and written communication through academic mentoring.",
+      "Maintained high-quality responses while meeting strict quality standards.",
     ],
   },
 ];
@@ -191,9 +217,9 @@ export const socialLinks = [
 
 export const projectCategories = [
   { id: "all", label: "All", emoji: "📁" },
-  { id: "cloud", label: "Cloud-Ops", emoji: "☁️" },
-  { id: "aiml", label: "AI/ML", emoji: "🤖" },
+  { id: "aiml", label: "AI Powered Application", emoji: "🤖" },
   { id: "fullstack", label: "Full-stack", emoji: "🧠" },
+  { id: "cloud", label: "Cloud-Ops", emoji: "☁️" },
   { id: "frontend", label: "Front-end", emoji: "🎨" },
 ];
 
@@ -219,27 +245,6 @@ export const projects = [
       "RESTful API with Flask",
       "Dynamic search and sorting",
       "Automated archival system",
-    ],
-  },
-  {
-    category: "fullstack",
-    iconUrl: estate,
-    theme: "btn-back-green",
-    name: "E-Commerce Platform",
-    shortDescription:
-      "Full-featured MERN e-commerce application with payment gateway integration.",
-    fullDescription:
-      "A comprehensive e-commerce platform built using the MERN stack. Features include JWT-based authentication with CORS policy enforcement, Razorpay payment gateway integration for secure transactions, shopping cart and wishlist functionality, order management system, and advanced product filtering. The application implements secure API access patterns and real-time payment validation.",
-    technologies: ["MERN", "JWT", "Razorpay", "REST API", "Node.js", "Express"],
-    deployment: "Full-stack MERN deployment",
-    liveLink: "https://e-commerce-1lac.onrender.com/",
-    githubLink: "https://github.com/panjyar/E-Commerce-.git",
-    preview: ecommerce,
-    features: [
-      "JWT authentication with CORS",
-      "Razorpay payment integration",
-      "Cart and wishlist management",
-      "Advanced product filtering",
     ],
   },
   {
@@ -270,6 +275,28 @@ export const projects = [
       "Dockerized architecture",
     ],
   },
+  {
+    category: "fullstack",
+    iconUrl: estate,
+    theme: "btn-back-green",
+    name: "E-Commerce Platform",
+    shortDescription:
+      "Full-featured MERN e-commerce application with payment gateway integration.",
+    fullDescription:
+      "A comprehensive e-commerce platform built using the MERN stack. Features include JWT-based authentication with CORS policy enforcement, Razorpay payment gateway integration for secure transactions, shopping cart and wishlist functionality, order management system, and advanced product filtering. The application implements secure API access patterns and real-time payment validation.",
+    technologies: ["MERN", "JWT", "Razorpay", "REST API", "Node.js", "Express"],
+    deployment: "Full-stack MERN deployment",
+    liveLink: "https://e-commerce-1lac.onrender.com/",
+    githubLink: "https://github.com/panjyar/E-Commerce-.git",
+    preview: ecommerce,
+    features: [
+      "JWT authentication with CORS",
+      "Razorpay payment integration",
+      "Cart and wishlist management",
+      "Advanced product filtering",
+    ],
+  },
+
   // Cloud & DevOps Projects
   {
     category: "cloud",
@@ -353,6 +380,79 @@ export const projects = [
   // AI/ML Projects
   {
     category: "aiml",
+    iconUrl: news,
+    theme: "btn-back-purple",
+    name: "AI-First HCP CRM",
+    shortDescription:
+      "AI-powered CRM using LangGraph agents to automate healthcare professional interaction logging and follow-up management.",
+
+    fullDescription:
+      "An AI-first healthcare CRM that enables medical representatives to manage Healthcare Professional (HCP) interactions through natural language conversations. Built with FastAPI, LangGraph, PostgreSQL, and Groq LLMs, the system intelligently selects CRM tools to log interactions, edit records, search HCPs, retrieve history, and schedule follow-ups while automatically updating a read-only CRM interface.",
+
+    technologies: [
+      "FastAPI",
+      "LangGraph",
+      "Groq LLM",
+      "PostgreSQL",
+      "React",
+      "Docker",
+      "Python",
+    ],
+
+    deployment: "Dockerized FastAPI backend with PostgreSQL",
+
+    liveLink: "https://ai-first-hcp-crm-frontend.onrender.com/",
+
+    githubLink: "https://github.com/panjyar/AI-First-HCP-CRM",
+
+    preview: hcp,
+
+    features: [
+      "LangGraph AI agent with multiple CRM tools",
+      "Natural language interaction logging",
+      "Automated HCP search and follow-up scheduling",
+      "Real-time CRM form updates using AI responses",
+    ],
+  },
+  {
+    category: "aiml",
+    iconUrl: news,
+    theme: "btn-back-purple",
+    name: "AI Assistance Task Manager",
+
+    shortDescription:
+      "Full-stack task management platform with AI-powered task generation and intelligent productivity assistance.",
+
+    fullDescription:
+      "A modern full-stack task management application featuring secure authentication, drag-and-drop task organization, and AI-assisted task creation. Google Gemini generates task descriptions and priority levels from simple prompts, while the Node.js backend securely handles AI requests through REST APIs with MongoDB for persistent task management.",
+
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Gemini AI",
+      "Tailwind CSS",
+      "JWT",
+    ],
+
+    deployment: "Node.js REST API with MongoDB",
+
+    liveLink: "https://ai-assistance-todo-frontend.onrender.com/",
+
+    githubLink: "https://github.com/panjyar/AI-Assistance-ToDo",
+
+    preview: taskmanager,
+
+    features: [
+      "AI-generated task descriptions and priorities",
+      "Drag-and-drop task management",
+      "JWT authentication with REST APIs",
+      "Responsive full-stack productivity dashboard",
+    ],
+  },
+  {
+    category: "aiml",
     iconUrl: resume,
     theme: "btn-back-purple",
     name: "Resume Parsing & Ranking System ",
@@ -385,8 +485,7 @@ export const projects = [
     deployment: "Flask application",
     liveLink: "https://github.com/panjyar/Movie_Recommendation_System.git",
     githubLink: "https://github.com/panjyar/Movie_Recommendation_System.git",
-    preview:
-      "https://private-user-images.githubusercontent.com/121200924/306375406-af8b5e67-1c42-45db-9e01-bc55cccedc1c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAzMDI1NzMsIm5iZiI6MTc2MDMwMjI3MywicGF0aCI6Ii8xMjEyMDA5MjQvMzA2Mzc1NDA2LWFmOGI1ZTY3LTFjNDItNDVkYi05ZTAxLWJjNTVjY2NlZGMxYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQyMDUxMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01NzI4OTI4ZDIzZmQwM2EwNzU5NGM3MWE0MDZjZjVmOWYzZDU0NmEzZWUxYzgxMmYzMmVjYzVlMzMwOTk0OTcyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ZEdx7bo0k16hBMkAgSLNXI961mwrZiyPPTGVhY0EUlw",
+    preview: movierecomendation,
     features: [
       "Cosine similarity-based recommendations",
       "Interactive web interface",
@@ -549,6 +648,12 @@ export const blogs = [
 
 export const certificates = [
   {
+    title: "AWS Cloud Foundations",
+    issuer: "Amazon Web Services (via Credly)",
+    image: awscloud,
+    link: "https://www.credly.com/badges/f37d4d27-2115-467c-bcf0-280d55f24efa/public_url",
+  },
+  {
     title: "SQL (Basic)",
     issuer: "HackerRank",
     image: sqlbasic,
@@ -560,12 +665,7 @@ export const certificates = [
     image: sqlinter,
     link: "https://www.hackerrank.com/certificates/iframe/15494cf61275",
   },
-  {
-    title: "AWS Cloud Foundations",
-    issuer: "Amazon Web Services (via Credly)",
-    image: awscloud,
-    link: "https://www.credly.com/badges/f37d4d27-2115-467c-bcf0-280d55f24efa/public_url",
-  },
+
   {
     title: "Deloitte Virtual Job Simulation",
     issuer: "Deloitte (Forage)",

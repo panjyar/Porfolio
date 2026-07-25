@@ -1,9 +1,68 @@
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { skillCategories, experiences, certificates } from '../constants';
-import CTA from '../components/CTA';
-import SocialMedia from '../components/SocialMedia';
-import { useEffect } from 'react';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import {
+  skillCategories,
+  professionalExperience,
+  leadershipExperience,
+  otherExperience,
+  certificates,
+} from "../constants";
+import CTA from "../components/CTA";
+import SocialMedia from "../components/SocialMedia";
+import { useEffect } from "react";
+
+const TimelineSection = ({ title, description, items }) => (
+  <>
+    <div className="py-10">
+      <h3 className="subhead-text">{title}</h3>
+      <div className="mt-5 flex flex-col gap-3 text-slate-500">
+        <p>{description}</p>
+      </div>
+    </div>
+
+    <div className="mt-12 flex">
+      <VerticalTimeline>
+        {items.map((item, index) => (
+          <VerticalTimelineElement
+            key={`${item.company_name}-${index}`}
+            date={item.date}
+            icon={
+              <div className="flex justify-center items-center w-full h-full">
+                <img
+                  src={item.icon}
+                  alt={item.company_name}
+                  className="w-[60%] h-[60%] object-contain"
+                />
+              </div>
+            }
+            iconStyle={{ background: item.iconBg }}
+            contentStyle={{
+              borderBottom: "8px solid",
+              borderBottomColor: item.iconBg,
+              boxShadow: "none",
+            }}
+          >
+            <h3 className="text-xl font-semibold">{item.title}</h3>
+            <p className="font-medium" style={{ margin: 0 }}>
+              {item.company_name}
+            </p>
+
+            <ul className="my-5 ml-5 list-disc space-y-2">
+              {item.points.map((point, idx) => (
+                <li key={idx} className="text-sm text-black-500/50">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </div>
+  </>
+);
 
 const About = () => {
   useEffect(() => {
@@ -18,27 +77,42 @@ const About = () => {
       <section className="max-container">
         <h1 className="head-text">
           Hey I'm
-          <span className="blue-gradient_text font-semibold font-shadow drop-shadow"> Pradip Panjiyar</span>
+          <span className="blue-gradient_text font-semibold font-shadow drop-shadow">
+            {" "}
+            Pradip Panjiyar
+          </span>
         </h1>
 
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            An aspiring full stack developer from India with a passion for building innovative web solutions.
-            I specialize in the MERN stack and actively improve my data structures and algorithms skills through
-            platforms like LeetCode and CodingNinja.
+            I'm a Full Stack Software Engineer from India with experience
+            building scalable web, mobile, and AI-powered applications. I work
+            across the entire stack using React.js, Next.js, React Native,
+            Node.js, Express.js, FastAPI, PostgreSQL, Redis, Docker, and AWS to
+            deliver reliable, production-ready software.
           </p>
+
           <p>
-            Currently seeking exciting web developer roles and freelance projects where I can leverage my expertise
-            in crafting sleek, functional web applications. I thrive in dynamic environments where creativity meets code.
+            At LivNSense GreenOps, I contributed to enterprise platforms by
+            developing REST APIs, HRMS modules, authentication systems,
+            AI-powered industrial safety applications, and real-time features. I
+            also enjoy building intelligent products with LLMs, LangGraph, and
+            Python while continuously strengthening my problem-solving skills
+            through Data Structures and Algorithms.
           </p>
+
           <p className="font-semibold text-slate-700">
-            Let's collaborate and build something incredible together! 🚀
+            I'm currently seeking Full Stack Software Engineer opportunities
+            where I can build meaningful products, tackle complex engineering
+            challenges, and make a lasting impact.
           </p>
         </div>
 
         {/* Skills Section - Organized by Category */}
         <div className="py-16">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-3">Skills</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-3">
+            Skills
+          </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-16"></div>
 
           {/* Programming Languages */}
@@ -59,7 +133,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -83,7 +159,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -107,7 +185,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800 text-sm">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800 text-sm">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -131,7 +211,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -154,7 +236,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800 text-sm">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800 text-sm">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -178,7 +262,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800 text-sm">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800 text-sm">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -201,7 +287,9 @@ const About = () => {
                       className="w-16 h-16 object-contain"
                     />
                   </div>
-                  <p className="font-bold text-center text-gray-800 text-sm">{skill.name}</p>
+                  <p className="font-bold text-center text-gray-800 text-sm">
+                    {skill.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -209,65 +297,31 @@ const About = () => {
         </div>
 
         {/* Experience Section */}
-        <div className="py-10">
-          <h3 className="subhead-text">Professional Experience</h3>
-          <div className="mt-5 flex flex-col gap-3 text-slate-500">
-            <p>
-              As an entry-level professional, I've engaged with various organizations, enhancing my skills
-              and collaborating with talented individuals. Here's my journey:
-            </p>
-          </div>
-        </div>
 
-        <div className="mt-12 flex">
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <VerticalTimelineElement
-                key={`${experience.company_name}-${index}`}
-                date={experience.date}
-                icon={
-                  <div className="flex justify-center items-center w-full h-full">
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className="w-[60%] h-[60%] object-contain"
-                    />
-                  </div>
-                }
-                iconStyle={{ background: experience.iconBg }}
-                contentStyle={{
-                  borderBottom: '8px',
-                  borderStyle: 'solid',
-                  borderBottomColor: experience.iconBg,
-                  boxShadow: 'none',
-                }}
-              >
-                <div>
-                  <h3 className="text-black text-xl font-poppins font-semibold">
-                    {experience.title}
-                  </h3>
-                  <p className="text-black-500 font-medium font-base" style={{ margin: 0 }}>
-                    {experience.company_name}
-                  </p>
-                </div>
+        <TimelineSection
+          title="Professional Experience"
+          description="My software engineering experience building enterprise and AI-powered applications."
+          items={professionalExperience}
+        />
 
-                <ul className="my-5 list-disc ml-5 space-y-2">
-                  {experience.points.map((point, idx) => (
-                    <li key={`experience-point-${idx}`} className="text-black-500/50 font-normal pl-1 text-sm">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
-        </div>
+        <TimelineSection
+          title="Leadership Experience"
+          description="Communities and initiatives where I led teams and organized technical events."
+          items={leadershipExperience}
+        />
+
+        <TimelineSection
+          title="Other Experience"
+          description="Earlier work that strengthened my communication, analytical thinking, and problem-solving skills."
+          items={otherExperience}
+        />
 
         {/* Certifications Section */}
         <div className="mt-20">
           <h3 className="subhead-text">Certifications & Achievements</h3>
           <p className="mt-3 text-slate-500 mb-10">
-            Professional certifications and recognitions that validate my expertise
+            Professional certifications and recognitions that validate my
+            expertise
           </p>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -283,7 +337,9 @@ const About = () => {
                     className="w-full h-40 object-contain"
                   />
                 </div>
-                <h4 className="text-lg font-bold text-slate-800 mb-2">{cert.title}</h4>
+                <h4 className="text-lg font-bold text-slate-800 mb-2">
+                  {cert.title}
+                </h4>
                 <p className="text-sm text-slate-600 mb-4">{cert.issuer}</p>
 
                 {cert.link ? (
@@ -296,7 +352,9 @@ const About = () => {
                     View Certificate
                   </a>
                 ) : (
-                  <p className="text-xs italic text-slate-400 text-center">No certificate link available</p>
+                  <p className="text-xs italic text-slate-400 text-center">
+                    No certificate link available
+                  </p>
                 )}
               </div>
             ))}

@@ -59,11 +59,17 @@ import collegebuzz from './collegebuzz.png'
 import chat from './chat.png'
 import hobbylink from './hobbylink.png'
 import excel from './excel.png'
+import reactnative from './reactnative.png'
+import LivNSenseLogo from './LivNSenseLogo.svg'
+import movierecomendation from './movierecomendation.png'
+import taskmanager from './taskmanager.png'
+import hcp from './hcp.png'
 export {
     css,
     excel,
     hobbylink,
-    ecommerce,chat,
+    ecommerce,
+    chat,
     collegebuzz,
     googlecloud,moviereview,resumeranking,wheather,kube,
     disaster,
@@ -98,6 +104,11 @@ export {
     motion,
     mui,
     nextjs,
+    reactnative,
+    LivNSenseLogo,
+    movierecomendation,
+    taskmanager,
+    hcp,
     nodejs,
     react,
     redux,
