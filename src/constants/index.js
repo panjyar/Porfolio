@@ -3,10 +3,10 @@ import {
   gdsc,
   sqlbasic,
   sqlinter,
-  gcsj,
   gdsc_certificate,
   deliotte,
   awscloud,
+  gcsj,
 } from "../assets/images";
 import {
   contact,
@@ -681,7 +681,7 @@ export const certificates = [
   {
     title: "Google Cloud Study Jam",
     issuer: "Google Developer Student Clubs CITK",
-    image: gdsc_certificate,
+    image: gcsj,
     link: "https://drive.google.com/file/d/14NrXf-U5lC3SNm4NIVsyrmR1YZuZ-wg1/view?usp=sharing",
   },
 ];

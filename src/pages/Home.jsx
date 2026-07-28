@@ -116,7 +116,7 @@ const Home = () => {
       <SocialMedia />
 
       <div className="absolute top-12 w-full flex justify-center z-20 pointer-events-none">
-        <p className="text-slate-750 text-sm md:text-base  transition-opacity duration-300 text-center">
+        <p className="text-slate-750 text-sm md:text-base  transition-opacity duration-300 pt-10 text-center">
           Click and drag to explore the island. Use the arrows to fly with the bird.
         </p>
       </div>

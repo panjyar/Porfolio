@@ -12,7 +12,7 @@ import {
 } from "../constants";
 import CTA from "../components/CTA";
 import SocialMedia from "../components/SocialMedia";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const TimelineSection = ({ title, description, items }) => (
   <>
@@ -71,6 +71,7 @@ const About = () => {
     script.async = true;
     document.body.appendChild(script);
   }, []);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   return (
     <div>
@@ -334,7 +335,8 @@ const About = () => {
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-40 object-contain"
+                    onClick={() => setSelectedCertificate(cert.image)}
+                    className="w-full h-40 object-contain cursor-pointer transition duration-300 hover:scale-105"
                   />
                 </div>
                 <h4 className="text-lg font-bold text-slate-800 mb-2">
@@ -360,6 +362,30 @@ const About = () => {
             ))}
           </div>
         </div>
+        {selectedCertificate && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            onClick={() => setSelectedCertificate(null)}
+          >
+            <div
+              className="relative max-w-5xl max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedCertificate(null)}
+                className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-white text-black text-xl shadow-lg hover:bg-gray-200"
+              >
+                ✕
+              </button>
+
+              <img
+                src={selectedCertificate}
+                alt="Certificate Preview"
+                className="max-w-full max-h-[90vh] rounded-xl shadow-2xl object-contain"
+              />
+            </div>
+          </div>
+        )}
 
         <hr className="border-slate-200 mt-16" />
         <CTA />
