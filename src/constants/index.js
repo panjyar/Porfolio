@@ -66,6 +66,7 @@ import {
   chat,
   hobbylink,
   excel,
+  saas_portfolio
 } from "../assets/icons";
 
 // Organized Skills by Category
@@ -585,6 +586,27 @@ export const projects = [
     category: "frontend",
     iconUrl: sorting,
     theme: "btn-back-pink",
+    name: "A Saas Portfolio Website",
+    shortDescription:
+      "Interactive Portfolio Website",
+    fullDescription:
+      "A modern, interactive SaaS portfolio website built with modern web technologies. This website features a sleek, responsive design, smooth animations, and dynamic content presentation. It serves as a professional platform to showcase projects, skills, and achievements with a premium user experience.",
+    technologies: ["NextJS", "TaildwindCSS", "JavaScript"],
+    deployment: "Static site deployment",
+    liveLink: "https://saa-s-portfolio-website.vercel.app/",
+    githubLink: "https://github.com/panjyar/SaaS-Portfolio-Website",
+    preview: saas_portfolio,
+    features: [
+      "Real-time score tracking",
+      "Participant rankings",
+      "Responsive design",
+      "Dynamic updates",
+    ],
+  },
+  {
+    category: "frontend",
+    iconUrl: sorting,
+    theme: "btn-back-pink",
     name: "Certificate Generator",
     shortDescription:
       "Lightweight client-side PDF certificate generator with jsPDF.",
@@ -623,6 +645,7 @@ export const projects = [
       "Dynamic updates",
     ],
   },
+
 ];
 
 export const blogs = [

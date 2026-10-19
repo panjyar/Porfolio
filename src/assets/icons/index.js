@@ -64,6 +64,7 @@ import LivNSenseLogo from './LivNSenseLogo.svg'
 import movierecomendation from './movierecomendation.png'
 import taskmanager from './taskmanager.png'
 import hcp from './hcp.png'
+import saas_portfolio from './saas_portfolio.png'
 export {
     css,
     excel,
@@ -71,7 +72,7 @@ export {
     ecommerce,
     chat,
     collegebuzz,
-    googlecloud,moviereview,resumeranking,wheather,kube,
+    googlecloud, moviereview, resumeranking, wheather, kube,
     disaster,
     certificate,
     c,
@@ -126,5 +127,6 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    saas_portfolio
 }
